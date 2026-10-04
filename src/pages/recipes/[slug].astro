@@ -16,7 +16,7 @@ const jsonLd = {
     <main>
         <article class="recipe-page">
             <section class="hero">
-                <div class="hero-copy"><p class="eyebrow">Mumbai street food · Vegetarian</p><h1>{recipe.title.split(" ").slice(0, -recipe.shortTitle.split(" ").length).join(" ")}<br><em>{recipe.shortTitle}</em></h1><p class="intro">{recipe.description}</p><a class="primary-button" href="#recipe">Jump to recipe <span aria-hidden="true">↓</span></a></div>
+                <div class="hero-copy"><p class="eyebrow">{recipe.region ?? "Mumbai street food"} · Vegetarian</p><h1>{recipe.title.split(" ").slice(0, -recipe.shortTitle.split(" ").length).join(" ")}<br><em>{recipe.shortTitle}</em></h1><p class="intro">{recipe.description}</p><a class="primary-button" href="#recipe">Jump to recipe <span aria-hidden="true">↓</span></a></div>
                 <div class="hero-image-wrap"><img src={recipe.image} alt={recipe.title} width="1200" height="900"></div>
             </section>
             <section class="recipe-meta" aria-label="Recipe details"><div><strong>{recipe.serves}</strong><span>serves</span></div><div><strong>{recipe.total}</strong><span>total time</span></div><div><strong>{recipe.difficulty}</strong><span>difficulty</span></div><div><strong>{recipe.cuisine}</strong><span>cuisine</span></div></section>
